@@ -6,10 +6,13 @@ Clone this repo to your local machine, and add the RNN-Tutorial directory as a s
 ```bash
 git clone https://github.com/silicon-valley-data-science/RNN-Tutorial
 cd RNN-Tutorial
-echo "export RNN_TUTORIAL=${PWD}" >> ~/.profile
 echo "export PYTHONPATH=$RNN_TUTORIAL/src:${PYTHONPATH}" >> ~/.profile
 source ~/.profile
 ```
+
+If eclipse, remember to add src to pythonpath by right clicking on project,
+go to properties, click on PyDev - PYTHONPATH, source folders tab, add source
+folder, then choose the src folder.
 
 Create a Conda environment (You will need to [Install Conda](https://conda.io/docs/install/quick.html) first)
 

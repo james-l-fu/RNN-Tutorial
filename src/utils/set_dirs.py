@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import os
+from pathlib import Path
 
 
 def get_relevant_directories(
@@ -20,7 +21,8 @@ def get_relevant_directories(
 
 def get_home_dir(home_dir=None):
     if home_dir is None:
-        home_dir = os.environ['RNN_TUTORIAL']
+        #home_dir = os.environ['RNN_TUTORIAL']
+        home_dir =Path(__file__).parents[2]
     return home_dir
 
 
