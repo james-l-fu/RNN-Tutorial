@@ -15,21 +15,28 @@ go to properties, click on PyDev - PYTHONPATH, source folders tab, add source
 folder, then choose the src folder.
 
 Create a Conda environment (You will need to [Install Conda](https://conda.io/docs/install/quick.html) first)
+Note: This guide helped too (https://conda.io/docs/user-guide/getting-started.html)
 
 ```bash
-conda create --name tf-rnn python=3
+conda create --name tf-rnn
 source activate tf-rnn
 cd $RNN_TUTORIAL
 pip install -r requirements.txt
 ```
+
+Note: it works with python 3.6 and all new versions of the requirements.
 
 ### Install TensorFlow
 
 If you have a NVIDIA GPU with [CUDA](http://docs.nvidia.com/cuda/cuda-installation-guide-linux/#package-manager-installation) already installed
 
 ```bash
-pip install tensorflow-gpu==1.0.1
+pip install --ignore-installed --upgrade tensorflow-gpu 
 ```
+Note: It works with tensorflow 1.5
+IMPORTANT!!!: You need to install cuda 9.0 instead of 9.1.
+Also install cudnn 9.0 v7, you need to register though.
+https://developer.nvidia.com/cudnn
 
 If you will be running TensorFlow on CPU only (i.e. a MacBook Pro), use the following command (if you get an error the first time you run this command read below):
 
@@ -63,7 +70,7 @@ _NOTE: If you have a GPU available, the code will run faster if you set `tf_devi
 To visualize your results via tensorboard:
 
 ```bash
-tensorboard --logdir=$RNN_TUTORIAL/models/nn/debug_models/summary/
+tensorboard --logdir=$RNN_TUTORIAL/models/nn/debug_models/summary/"folder with summary you want"
 ```
 
 - TensorBoard can be found in your browser at [http://localhost:6006](http://localhost:6006).
