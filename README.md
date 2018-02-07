@@ -10,7 +10,7 @@ echo "export PYTHONPATH=$RNN_TUTORIAL/src:${PYTHONPATH}" >> ~/.profile
 source ~/.profile
 ```
 
-If eclipse, remember to add src to pythonpath by right clicking on project,
+If eclipse ignore above, just add src to pythonpath by right clicking on project,
 go to properties, click on PyDev - PYTHONPATH, source folders tab, add source
 folder, then choose the src folder.
 
